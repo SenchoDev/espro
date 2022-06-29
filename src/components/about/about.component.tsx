@@ -51,7 +51,7 @@ const BlueWrapper = styled.div`
   width: 63rem;
   top: 4rem;
   left: 4rem;
-  background: #84aec1;
+  background: ${(props) => props.theme.colors.ui.light};
 `;
 
 const rotateAnimation = keyframes`
@@ -73,7 +73,6 @@ const Spinner = styled.img`
 `;
 
 const About = () => {
-
   return (
     <AboutLayout>
       <AboutTextWrapper>
@@ -81,7 +80,7 @@ const About = () => {
         <HeaderMain color="primary" variant="normal">
           COFFEE TO WATER RATIOS: HOW TO MEASURE COFFEE LIKE A PRO
         </HeaderMain>
-        <HeaderParagraph color="primary">
+        <HeaderParagraph color="primary" variant="small">
           <b>
             You can taste it when you’ve brewed with the perfect coffee to water
             ratio.
@@ -97,9 +96,7 @@ const About = () => {
       </AboutTextWrapper>
       <ImageWrapper>
         <AboutImage>
-      
-            <Spinner src={SpinnerSvg} alt="Spinner" />
-    
+          <Spinner src={SpinnerSvg} alt="Spinner" />
         </AboutImage>
         <BlueWrapper />
       </ImageWrapper>

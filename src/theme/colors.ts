@@ -9,6 +9,7 @@ export const colors = {
     secondary: "#8DB9CA",
     tertiary: "#659AB1",  
     quaternary: "#F24343",
+    light: "#84AEC1",
     gold: "#F0D563",   
     disabled: "#DEDEDE",
     error: "#D0421B", 

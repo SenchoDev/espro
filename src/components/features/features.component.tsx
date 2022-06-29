@@ -2,7 +2,7 @@ import styled from "styled-components";
 import feature1 from "../../assets/feature/feature1.png";
 import { HeaderMain, HeaderParagraph } from "../../theme/typography";
 import CustomButton from "../button/button.component";
-import ImagesSlider  from "./slider.component";
+import ImagesSlider from "./slider.component";
 
 const FeaturesWrapper = styled.section`
   display: grid;
@@ -53,7 +53,7 @@ const SlidesText = styled.h1`
   margin: 0;
   position: absolute;
   bottom: 2.6rem;
-`
+`;
 
 const Features = () => {
   return (
@@ -64,7 +64,7 @@ const Features = () => {
             MAKE EVERY CUP AN EXPERIENCE.
           </HeaderMain>
           <ParagraphContainer>
-            <HeaderParagraph color="secondary">
+            <HeaderParagraph variant="small" color="secondary">
               Have your French pressed coffee anywhere with ESPRO’s Travel
               Press. A double micro-filter eliminates grit for your smoothest
               cup on the go, and the mug fits right in a car cup holder or
@@ -75,7 +75,7 @@ const Features = () => {
         </AboutHeaderWrapper>
       </AboutImage>
       <ImageSliderWrapper>
-        <ImagesSlider/>
+        <ImagesSlider />
         <SlidesText>PRESS. SIP. ENJOY.</SlidesText>
       </ImageSliderWrapper>
     </FeaturesWrapper>

@@ -8,6 +8,7 @@ import {
   HeaderParagraph,
 } from "../../theme/typography";
 import CustomButton from "../button/button.component";
+import { ReactComponent as PlayButtonSvg } from "../../assets/play-button.svg";
 
 const VideoWrapper = styled.section`
   background: ${(props) => props.theme.colors.bg.quaternary};
@@ -124,12 +125,13 @@ const Video = () => {
           <HeaderMain color="secondary" variant="big">
             FRESH GROUNDS
           </HeaderMain>
-          <HeaderParagraph color="secondary">
+          <HeaderParagraph variant="small" color="secondary">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
             <br /> sed diam nonumy eirmod tempor invidunt ut labore et.
           </HeaderParagraph>
           <ButtonWrapper>
             <CustomButton variant="outline" inverse>
+              <PlayButtonSvg />
               WATCH FILM
             </CustomButton>
           </ButtonWrapper>

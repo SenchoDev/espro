@@ -1,7 +1,8 @@
-import styled from "styled-components";
-import CustomButton from "../button/button.component"
+import styled, { keyframes } from "styled-components";
+import CustomButton from "../button/button.component";
 import hero from "../../assets/hero.png";
 import downArrow from "../../assets/down-arrow-2.svg";
+import { Link } from "react-scroll";
 
 const HeroSection = styled.section`
   height: 86vh;
@@ -43,10 +44,18 @@ const Header4 = styled.p`
   text-align: center;
 `;
 
-const ActionButtonWrapper = styled.a`
+const bounceAnimation = keyframes`
+0% {transform: translateY(0);} 
+50% {transform: translateY(-10px);} 
+100% {transform: translateY(-0);} 
+
+`;
+
+const ActionButtonWrapper = styled(Link)`
   position: absolute;
   bottom: 3rem;
   cursor: pointer;
+  animation: ${bounceAnimation} 2s linear infinite;
 `;
 
 const ActionText = styled.a`
@@ -57,7 +66,7 @@ const ActionText = styled.a`
   color: ${(props) => props.theme.colors.text.secondary};
 `;
 
-const ActionImage = styled.img` 
+const ActionImage = styled.img`
   margin-left: 1rem;
 `;
 
@@ -73,10 +82,8 @@ const Hero = () => {
           aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo.
         </Header4>
         <CustomButton variant="normal">POUR ON THE GO</CustomButton>
-        <ActionButtonWrapper>
-          <ActionText>
-            EXPLORE 
-          </ActionText>
+        <ActionButtonWrapper to="explore" smooth={true}>
+          <ActionText>EXPLORE</ActionText>
           <ActionImage src={downArrow} alt="down arrow" />
         </ActionButtonWrapper>
       </HeadingWrapper>

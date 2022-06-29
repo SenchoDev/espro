@@ -1,11 +1,15 @@
 import styled from "styled-components";
-import { HeaderInfo, HeaderMain, HeaderParagraph } from "../../theme/typography";
+import {
+  HeaderInfo,
+  HeaderMain,
+  HeaderParagraph,
+} from "../../theme/typography";
 
 import {
   story1,
   story2,
   story3,
-story4,
+  story4,
   story5,
   story6,
 } from "../../assets/story";
@@ -51,7 +55,8 @@ const ParagraphContainer = styled.div`
 const DottedBorder = styled.div`
   float: left;
   padding: 27rem 1px;
-  background: ${(props) => `linear-gradient(to bottom, ${props.theme.colors.ui.tertiary} 10%, rgba(255, 255, 255, 0) 0%)`};
+  background: ${(props) =>
+    `linear-gradient(to bottom, ${props.theme.colors.ui.tertiary} 10%, rgba(255, 255, 255, 0) 0%)`};
   background-position: left;
   background-size: 2px 1.9rem;
   background-repeat: repeat-y;
@@ -87,8 +92,6 @@ const Img6 = styled(GridImage)`
   grid-area: 4 / 1 / 6 / 5;
 `;
 
-
-
 const Story = () => {
   return (
     <StoryWrapper>
@@ -103,10 +106,11 @@ const Story = () => {
           COFFEE MADE FOR <br /> YOUR LIFE ON THE GO.
         </HeaderMain>
         <ParagraphContainer>
-          <HeaderParagraph color="primary">
+          <HeaderParagraph variant="small" color="primary">
             We understand coffee is a big part of your busy, active life. That’s
             why we create and develop products that allow you to bring your
-            passion for <b>coffee-when you want it-</b> and wherever life takes you.
+            passion for <b>coffee-when you want it-</b> and wherever life takes
+            you.
           </HeaderParagraph>
         </ParagraphContainer>
         <DottedBorder />

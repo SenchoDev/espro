@@ -4,6 +4,7 @@ interface CustomButtonProps {
   children?: React.ReactNode;
   variant: "outline" | "normal";
   inverse?: boolean;
+  inverseBlack?: boolean;
 }
 
 const Button = styled.button<CustomButtonProps>`
@@ -17,22 +18,33 @@ const Button = styled.button<CustomButtonProps>`
     `1px solid ${
       props.theme.colors.text[props.inverse ? "secondary" : "primary"]
     }`};
-  color: ${(props) => props.theme.colors.text[props.inverse ? "secondary" : "primary"]};
+  color: ${(props) =>
+    props.theme.colors.text[props.inverse ? "secondary" : "primary"]};
   text-transform: uppercase;
   border-radius: 100px;
   background-color: ${(props) =>
-    props.inverse ? "transparent" : props.theme.colors.bg.primary};
+    props.inverse || props.inverseBlack
+      ? "transparent"
+      : props.theme.colors.bg.primary};
   padding: 2rem 3.7rem;
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   &:hover {
     transform: scale(1.1);
   }
 `;
 
-const CustomButton = ({ children, variant, inverse }: CustomButtonProps) => {
+const CustomButton = ({
+  children,
+  variant,
+  inverse,
+  inverseBlack,
+}: CustomButtonProps) => {
   console.log(inverse);
   return (
-    <Button variant={variant} inverse={inverse}>
+    <Button variant={variant} inverse={inverse} inverseBlack={inverseBlack}>
       {children}
     </Button>
   );

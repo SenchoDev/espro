@@ -32,9 +32,11 @@ const ButtonWrapper = styled.div`
 
 const ExploreCards = () => {
   return (
-    <ExploreWrapper>
+    <ExploreWrapper id="explore">
       <CollectionsHeader>
-        <HeaderMain variant="normal" color="primary">EXPLORE OUR PRODUCTS</HeaderMain>
+        <HeaderMain variant="normal" color="primary">
+          EXPLORE OUR PRODUCTS
+        </HeaderMain>
       </CollectionsHeader>
       <CardsWrapper>
         {data.map((card, id) => (
