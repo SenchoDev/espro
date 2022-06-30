@@ -53,7 +53,6 @@ const VideoHeaderWrapper = styled.div`
   flex-direction: column;
   z-index: 1;
 `;
-
 const ButtonWrapper = styled.div`
   padding-top: 1rem;
 `;
@@ -89,7 +88,7 @@ const Video = () => {
 
   return (
     <VideoWrapper>
-      <VideoMainText>FRESH GROUNDS. 01 FRESH GROUNDS. 01</VideoMainText>
+      <VideoMainText>FRESH GROUNDS. 01 FRESH GROUNDS. 01 </VideoMainText>
       <BgVideo>
         <ReactPlayer
           ref={playerRef}

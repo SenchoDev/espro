@@ -41,6 +41,7 @@ const CollectionBackground = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
 const CollectionImage = styled.div<ImageProps>`
   width: 24rem;
   height: 22.8rem;

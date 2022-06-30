@@ -14,6 +14,8 @@ import {
   story6,
 } from "../../assets/story";
 
+import { useParallax } from "react-scroll-parallax";
+
 const StoryWrapper = styled.section`
   padding: 6.6rem 7.7rem;
   display: flex;
@@ -24,16 +26,26 @@ const StoryWrapper = styled.section`
 
 const Grid1 = styled.div`
   height: 680px;
+  max-width: 55rem;
+  justify-content: center;
   display: grid;
-  grid-template-columns: 246px 75px 105px 160px;
+  grid-template-columns: 2.4fr 0.7fr 1fr 1.6fr;
   grid-template-rows: 320px 40px 55px 160px 140px;
 `;
 
 const Grid2 = styled.div`
   height: 680px;
   display: grid;
-  grid-template-columns: 200px 230px 35px 60px 60px;
+  max-width: 55rem;
+  grid-template-columns: 2fr 2.3fr 0.35fr 0.6fr 0.6fr;
   grid-template-rows: 65px 95px 165px 40px 250px;
+`;
+
+const GridWrapper = styled.div`
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 const StoryHeaderWrapper = styled.div`
@@ -93,13 +105,35 @@ const Img6 = styled(GridImage)`
 `;
 
 const Story = () => {
+  const parallax1 = useParallax<HTMLImageElement>({
+    speed: -5,
+  });
+  const parallax2 = useParallax<HTMLImageElement>({
+    speed: -5,
+  });
+  const parallax3 = useParallax<HTMLImageElement>({
+    speed: 5,
+  });
+
+  const parallax4 = useParallax<HTMLImageElement>({
+    speed: -5,
+  });
+  const parallax5 = useParallax<HTMLImageElement>({
+    speed: -5,
+  });
+  const parallax6 = useParallax<HTMLImageElement>({
+    speed: 5,
+  });
+
   return (
     <StoryWrapper>
-      <Grid1>
-        <Img1 src={story1} alt="Story 1" />
-        <Img2 src={story2} alt="Story 2" />
-        <Img3 src={story3} alt="Story 3" />
-      </Grid1>
+      <GridWrapper>
+        <Grid1>
+          <Img1 src={story1} alt="Story 1" ref={parallax1?.ref} />
+          <Img2 src={story2} alt="Story 2" ref={parallax2?.ref} />
+          <Img3 src={story3} alt="Story 3" ref={parallax3?.ref} />
+        </Grid1>
+      </GridWrapper>
       <StoryHeaderWrapper>
         <HeaderInfo color="primary">DESIGNED FOR REAL LIFE</HeaderInfo>
         <HeaderMain variant="big" color="primary">
@@ -115,11 +149,13 @@ const Story = () => {
         </ParagraphContainer>
         <DottedBorder />
       </StoryHeaderWrapper>
-      <Grid2>
-        <Img4 src={story4} alt="Story 4" />
-        <Img5 src={story5} alt="Story 5" />
-        <Img6 src={story6} alt="Story 6" />
-      </Grid2>
+      <GridWrapper>
+        <Grid2>
+          <Img4 src={story4} alt="Story 4" ref={parallax4?.ref} />
+          <Img5 src={story5} alt="Story 5" ref={parallax5?.ref} />
+          <Img6 src={story6} alt="Story 6" ref={parallax6?.ref} />
+        </Grid2>
+      </GridWrapper>
     </StoryWrapper>
   );
 };

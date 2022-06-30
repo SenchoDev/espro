@@ -39,4 +39,5 @@ export const data = [
     },
     colors: ["#CACCCE", "#FFFFFF", "#676B6D", "#000000", "#285C4D", "#02205C"]
   },
+  
 ];

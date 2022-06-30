@@ -10,6 +10,7 @@ import About from "./components/about/about.component";
 import InstagramPictures from "./components/instagram/instagram.component";
 import Footer from "./components/footer/footer.component";
 import Story from "./components/story/story.component";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import { theme } from "./theme";
@@ -30,23 +31,25 @@ const GlobalStyles = createGlobalStyle`
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <Container>
-        <GlobalStyles />
-        <TopHeader />
-        <Header />
-        <Hero />
-        <Collections />
-        <Story />
-        <ExploreCards />
-        <Features />
-        <Brands />
-        <Video />
-        <About />
-        <InstagramPictures />
-        <Footer />
-      </Container>
-    </ThemeProvider>
+    <ParallaxProvider>
+      <ThemeProvider theme={theme}>
+        <Container>
+          <GlobalStyles />
+          <TopHeader />
+          <Header />
+          <Hero />
+          <Collections />
+          <Story />
+          <ExploreCards />
+          <Features />
+          <Brands />
+          <Video />
+          <About />
+          <InstagramPictures />
+          <Footer />
+        </Container>
+      </ThemeProvider>
+    </ParallaxProvider>
   );
 };
 
