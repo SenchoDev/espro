@@ -4,8 +4,12 @@ import BrandItem from "./brand.component";
 import { data } from "./brand.data";
 import { colors } from "../../theme/colors";
 import { useSpring } from "react-spring";
-import { BrandsWrapper, BrandsHeader, BrandLogos, ParagraphWrapper } from './brands.styles';
-
+import {
+  BrandsWrapper,
+  BrandsHeader,
+  BrandLogos,
+  ParagraphWrapper,
+} from "./brands.styles";
 
 const Brands = () => {
   const [previewText, setPreviewText] = useState(data[2].text);

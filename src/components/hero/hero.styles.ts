@@ -49,7 +49,7 @@ export const Header4 = styled.p`
 
 export const Header4Wrapper = styled.div`
   max-width: 77rem;
-`
+`;
 
 export const bounceAnimation = keyframes`
   0% {transform: translateY(0);} 

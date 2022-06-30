@@ -1,7 +1,23 @@
 import goldStar from "../../assets/gold-star.svg";
 import greyStar from "../../assets/grey-star.svg";
 import { Collection, Price } from "./collection.type";
-import { CollectionWrapper, StatusFlag, CollectionBackground, CollectionsAbout, CollectionImage, StarsWrapper, StatusText, Star, ItemText, ItemPrice, PriceText, CrossedPriceText, Colors, SelectedItemColor, ItemColor } from './collections.styles'
+import {
+  CollectionWrapper,
+  StatusFlag,
+  CollectionBackground,
+  CollectionsAbout,
+  CollectionImage,
+  StarsWrapper,
+  StatusText,
+  Star,
+  ItemText,
+  ItemPrice,
+  PriceText,
+  CrossedPriceText,
+  Colors,
+  SelectedItemColor,
+  ItemColor,
+} from "./collections.styles";
 
 interface CollectionProps {
   item: Collection;

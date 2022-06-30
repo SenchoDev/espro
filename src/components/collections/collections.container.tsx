@@ -1,10 +1,14 @@
-
 import CollectionItem from "./collection.component";
 import { data } from "./collections.data";
 import { HeaderInfo, HeaderMain } from "../../theme/typography";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { CollectionsWrapper, CollectionsHeader, CollectionItems, CustomSlider } from './collections.styles'
+import {
+  CollectionsWrapper,
+  CollectionsHeader,
+  CollectionItems,
+  CustomSlider,
+} from "./collections.styles";
 
 const Collections = () => {
   return (

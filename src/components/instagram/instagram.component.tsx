@@ -1,7 +1,13 @@
 import { HeaderMain, HeaderParagraph } from "../../theme/typography";
 import CustomButton from "../button/button.component";
 import { ReactComponent as InstagramSvg } from "../../assets/instagram.svg";
-import { HeroSection, HeaderWrapper, HeaderTop, PicturesWrapper, Picture } from './instagram.styles'
+import {
+  HeroSection,
+  HeaderWrapper,
+  HeaderTop,
+  PicturesWrapper,
+  Picture,
+} from "./instagram.styles";
 
 const images = [
   "https://i.ibb.co/sqnL1gJ/instagram1.png",

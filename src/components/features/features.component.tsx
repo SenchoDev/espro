@@ -1,7 +1,14 @@
 import { HeaderMain, HeaderParagraph } from "../../theme/typography";
 import CustomButton from "../button/button.component";
 import ImagesSlider from "./slider.component";
-import { FeaturesWrapper, AboutImage, AboutHeaderWrapper, ParagraphContainer, ImageSliderWrapper, SlidesText} from './features.styles'
+import {
+  FeaturesWrapper,
+  AboutImage,
+  AboutHeaderWrapper,
+  ParagraphContainer,
+  ImageSliderWrapper,
+  SlidesText,
+} from "./features.styles";
 
 const Features = () => {
   return (

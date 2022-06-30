@@ -2,7 +2,12 @@ import { HeaderMain } from "../../theme/typography";
 import ExploreCardItem from "./explore-card.component";
 import CustomButton from "../button/button.component";
 import { data } from "./explore-cards.data";
-import { ExploreWrapper, CollectionsHeader, CardsWrapper, ButtonWrapper } from './explore-cards.styles';
+import {
+  ExploreWrapper,
+  CollectionsHeader,
+  CardsWrapper,
+  ButtonWrapper,
+} from "./explore-cards.styles";
 
 const ExploreCards = () => {
   return (

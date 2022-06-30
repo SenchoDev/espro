@@ -4,7 +4,7 @@ import { ReactComponent as Paste } from "../../assets/brands/paste.svg";
 import { ReactComponent as FastCompany } from "../../assets/brands/fast-company.svg";
 import { ReactComponent as Continential } from "../../assets/brands/continental.svg";
 import { ReactComponent as Bonanza } from "../../assets/brands/bonanza.svg";
-import { BrandItemWrapper } from './brands.styles';
+import { BrandItemWrapper } from "./brands.styles";
 
 interface BrandProps {
   brand: Brand;

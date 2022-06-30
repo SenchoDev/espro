@@ -20,10 +20,10 @@ export const Grid1 = styled.div`
   grid-template-columns: 2.4fr 0.7fr 1fr 1.6fr;
   grid-template-rows: 320px 40px 55px 160px 140px;
   @media only screen and ${device.tabPort} {
-    grid-template-columns: minmax(25rem, 1fr); 
+    grid-template-columns: minmax(25rem, 1fr);
     grid-template-rows: min-content;
     height: 50rem;
-  } ;
+  }
   @media only screen and ${device.phone} {
     height: 45rem;
     padding: 2rem;
@@ -38,11 +38,11 @@ export const Grid2 = styled.div`
   grid-template-rows: 65px 95px 165px 40px 250px;
 
   @media only screen and ${device.tabPort} {
-    grid-template-columns: minmax(25rem, 1fr); 
+    grid-template-columns: minmax(25rem, 1fr);
     grid-template-rows: auto;
     height: 50rem;
     justify-content: end;
-  } ;
+  }
   @media only screen and ${device.phone} {
     height: 45rem;
     margin-right: 7rem;
@@ -56,7 +56,7 @@ export const GridWrapper = styled.div`
   justify-content: center;
   @media only screen and ${device.tabPort} {
     margin-top: 25rem;
-  } ;
+  }
 
   @media only screen and ${device.phone} {
     margin-top: 20rem;

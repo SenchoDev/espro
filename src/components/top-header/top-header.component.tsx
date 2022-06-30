@@ -1,4 +1,4 @@
-import { TopHeaderLayout, Header3 } from './top-header.styles'
+import { TopHeaderLayout, Header3 } from "./top-header.styles";
 
 const TopHeader = () => {
   return (

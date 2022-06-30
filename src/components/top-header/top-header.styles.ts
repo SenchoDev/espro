@@ -10,7 +10,7 @@ export const TopHeaderLayout = styled.section`
 `;
 
 export const Header3 = styled.h3`
-  font-size: 1.1rem; 
+  font-size: 1.1rem;
   letter-spacing: 1.65px;
   color: ${(props) => props.theme.colors.text.secondary};
   text-transform: uppercase;

@@ -9,7 +9,7 @@ import {
   ActionButtonWrapper,
   ActionText,
   ActionImage,
-  Header4Wrapper
+  Header4Wrapper,
 } from "./hero.styles";
 
 const Hero = () => {
@@ -21,9 +21,8 @@ const Hero = () => {
         <Header4Wrapper>
           <Header4>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut  labore et dolore magna
-            aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-            duo.
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo.
           </Header4>
         </Header4Wrapper>
         <CustomButton variant="normal">POUR ON THE GO</CustomButton>

@@ -14,7 +14,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { theme } from "./theme";
-import { device } from './theme/device'
+import { device } from "./theme/device";
 
 const GlobalStyles = createGlobalStyle`
   html {
