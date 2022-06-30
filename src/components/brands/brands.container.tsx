@@ -1,35 +1,11 @@
 import { useState, useEffect } from "react";
-import styled from "styled-components";
 import { HeaderInfo, HeaderSemiParagraph } from "../../theme/typography";
 import BrandItem from "./brand.component";
 import { data } from "./brand.data";
 import { colors } from "../../theme/colors";
-import { useSpring, animated } from "react-spring";
+import { useSpring } from "react-spring";
+import { BrandsWrapper, BrandsHeader, BrandLogos, ParagraphWrapper } from './brands.styles';
 
-const BrandsWrapper = styled.section`
-  padding: 9rem 12rem;
-`;
-
-const BrandsHeader = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 5rem;
-`;
-
-const BrandLogos = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-items: center;
-  align-items: center;
-  grid-column-gap: 9rem;
-  margin: -6rem 0;
-`;
-
-export const ParagraphWrapper = styled(animated.div)`
-  width: 85rem;
-`;
 
 const Brands = () => {
   const [previewText, setPreviewText] = useState(data[2].text);
@@ -37,7 +13,7 @@ const Brands = () => {
   const [key, setKey] = useState(1);
 
   const scrolling = useSpring({
-    from: { transform: "translateX(-5rem)", opacity: 0.5 },
+    from: { transform: "translateX(-5rem)", opacity: 0.3 },
     to: { transform: "translateX(0)", opacity: 1 },
 
     config: { duration: 6000 },

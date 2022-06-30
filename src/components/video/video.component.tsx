@@ -1,5 +1,4 @@
 import { useRef, useState, useEffect } from "react";
-import styled from "styled-components";
 import ReactPlayer from "react-player";
 import screenfull from "screenfull";
 import {
@@ -9,53 +8,14 @@ import {
 } from "../../theme/typography";
 import CustomButton from "../button/button.component";
 import { ReactComponent as PlayButtonSvg } from "../../assets/play-button.svg";
-
-const VideoWrapper = styled.section`
-  background: ${(props) => props.theme.colors.bg.quaternary};
-  position: relative;
-  padding: 3rem 0 7.5rem 0;
-`;
-
-const VideoMainText = styled.h1`
-  font-family: Barlow Condensed;
-  color: #d8e6eb;
-  font-size: 10.5rem;
-  letter-spacing: 2.63px;
-  text-transform: uppercase;
-  display: flex;
-  margin: 0;
-  padding-bottom: 4rem;
-  width: 100%;
-  justify-content: center;
-  white-space: nowrap;
-  overflow: hidden;
-`;
-
-const BgVideo = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
-`;
-
-const VideoHeaderWrapper = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  z-index: 1;
-`;
-const ButtonWrapper = styled.div`
-  padding-top: 1rem;
-`;
+import Ticker from "react-ticker";
+import {
+  VideoWrapper,
+  VideoMainText,
+  BgVideo,
+  VideoHeaderWrapper,
+  ButtonWrapper,
+} from "./video.styles";
 
 const Video = () => {
   const [replay, setReplay] = useState(false);
@@ -88,7 +48,13 @@ const Video = () => {
 
   return (
     <VideoWrapper>
-      <VideoMainText>FRESH GROUNDS. 01 FRESH GROUNDS. 01 </VideoMainText>
+      <Ticker>
+        {({ index }) => (
+          <VideoMainText>
+            FRESH GROUNDS. 01 FRESH GROUNDS. 01 FRESH GROUNDS. 01
+          </VideoMainText>
+        )}
+      </Ticker>
       <BgVideo>
         <ReactPlayer
           ref={playerRef}
@@ -110,13 +76,12 @@ const Video = () => {
           style={{
             borderRadius: "0rem",
             overflow: "hidden",
-            display: !isFullscreen ? "none" : "block",
+            display: isFullscreen ? "block" : "none",
           }}
           url="https://vimeo.com/574425747/e180e54244"
-          playing={!isFullscreen ? false : true}
+          playing={isFullscreen ? true : false}
           controls
         />
-
         <VideoHeaderWrapper onClick={handleClickFullscreen}>
           <HeaderInfo color="secondary">
             EPISODE 01: THE GREAT MIGRATION

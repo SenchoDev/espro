@@ -12,14 +12,22 @@ import Footer from "./components/footer/footer.component";
 import Story from "./components/story/story.component";
 import { ParallaxProvider } from "react-scroll-parallax";
 
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { theme } from "./theme";
-
-const Container = styled.div``;
+import { device } from './theme/device'
 
 const GlobalStyles = createGlobalStyle`
   html {
     font-size: 62.5%; 
+
+    @media only screen and ${device.tabLand} {
+      font-size: 56.25%;  // 1rem is == 9px;
+    };
+
+    @media only screen and ${device.tabPort} {
+      font-size: 50%;  // 1rem is == 9px;
+    };
+    
   }
   body {
     margin: 0;
@@ -33,7 +41,7 @@ const App = () => {
   return (
     <ParallaxProvider>
       <ThemeProvider theme={theme}>
-        <Container>
+        <div>
           <GlobalStyles />
           <TopHeader />
           <Header />
@@ -47,7 +55,7 @@ const App = () => {
           <About />
           <InstagramPictures />
           <Footer />
-        </Container>
+        </div>
       </ThemeProvider>
     </ParallaxProvider>
   );

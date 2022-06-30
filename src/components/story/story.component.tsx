@@ -1,9 +1,23 @@
-import styled from "styled-components";
 import {
   HeaderInfo,
   HeaderMain,
   HeaderParagraph,
 } from "../../theme/typography";
+import {
+  StoryWrapper,
+  Grid1,
+  Grid2,
+  GridWrapper,
+  StoryHeaderWrapper,
+  ParagraphContainer,
+  DottedBorder,
+  Img1,
+  Img2,
+  Img3,
+  Img4,
+  Img5,
+  Img6,
+} from "./story.styles";
 
 import {
   story1,
@@ -15,94 +29,6 @@ import {
 } from "../../assets/story";
 
 import { useParallax } from "react-scroll-parallax";
-
-const StoryWrapper = styled.section`
-  padding: 6.6rem 7.7rem;
-  display: flex;
-  gap: 13rem;
-  position: relative;
-  background-color: ${(props) => props.theme.colors.ui.primary};
-`;
-
-const Grid1 = styled.div`
-  height: 680px;
-  max-width: 55rem;
-  justify-content: center;
-  display: grid;
-  grid-template-columns: 2.4fr 0.7fr 1fr 1.6fr;
-  grid-template-rows: 320px 40px 55px 160px 140px;
-`;
-
-const Grid2 = styled.div`
-  height: 680px;
-  display: grid;
-  max-width: 55rem;
-  grid-template-columns: 2fr 2.3fr 0.35fr 0.6fr 0.6fr;
-  grid-template-rows: 65px 95px 165px 40px 250px;
-`;
-
-const GridWrapper = styled.div`
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const StoryHeaderWrapper = styled.div`
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 8rem;
-  left: 50%;
-  transform: translate(-50%, 0);
-`;
-
-const ParagraphContainer = styled.div`
-  width: 41rem;
-`;
-
-const DottedBorder = styled.div`
-  float: left;
-  padding: 27rem 1px;
-  background: ${(props) =>
-    `linear-gradient(to bottom, ${props.theme.colors.ui.tertiary} 10%, rgba(255, 255, 255, 0) 0%)`};
-  background-position: left;
-  background-size: 2px 1.9rem;
-  background-repeat: repeat-y;
-`;
-
-const GridImage = styled.img`
-  width: 100%;
-`;
-
-const Img1 = styled(GridImage)`
-  grid-area: 1 / 1 / 3 / 2;
-`;
-
-const Img2 = styled(GridImage)`
-  grid-area: 2 / 3 / 5 / 5;
-  z-index: 10;
-`;
-
-const Img3 = styled(GridImage)`
-  grid-area: 4 / 1 / 6 / 4;
-`;
-
-const Img4 = styled(GridImage)`
-  grid-area: 2 / 2 / 5 / 3;
-  z-index: 10;
-`;
-
-const Img5 = styled(GridImage)`
-  grid-area: 1 / 4 / 3 / 6;
-`;
-
-const Img6 = styled(GridImage)`
-  grid-area: 4 / 1 / 6 / 5;
-`;
 
 const Story = () => {
   const parallax1 = useParallax<HTMLImageElement>({

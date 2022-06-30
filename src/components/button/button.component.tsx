@@ -42,7 +42,6 @@ const CustomButton = ({
   inverse,
   inverseBlack,
 }: CustomButtonProps) => {
-  console.log(inverse);
   return (
     <Button variant={variant} inverse={inverse} inverseBlack={inverseBlack}>
       {children}
